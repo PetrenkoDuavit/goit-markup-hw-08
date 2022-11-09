@@ -85,12 +85,12 @@
 
   &__address:hover,
   &__address:focus {
-  color: var( --brand-color-accent);
+  color: var(--brand-color-accent);
 }
 
 &__contact:hover ,
 &__contact:focus {
-  color: var(--brand-color_white);
+  color: var(--brand-color-accent);
 }
   // @media screen and(min-width:481px) and (max-width: 1200px) {
   //   &__text {
