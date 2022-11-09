@@ -1,0 +1,105 @@
+:root {
+  --brand-color-hero-footer: #2f303a;
+  --brand-color-accent: #2196f3;
+  --brand-color_black: #212121;
+  --brand-color_4: #e5e5e5;
+  --brand-color-text: #757575;
+  --brand-color_white: #ffffff;
+  --fone-svg-img: #f5f4fa;
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin marginX-auto($r: auto, $l: auto) {
+  margin-left: $l;
+  margin-right: $r;
+}
+
+@mixin flexCentr($fl: flex, $ai: center, $jc: center) {
+  display: $fl;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+body {
+  font-family: 'roboto', 'sans-serif';
+  letter-spacing: 0.03em;
+  color: var(--brand-color_black);
+}
+
+.container {
+  max-width: 480px;
+  width: 100%;
+
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+.section {
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
+}
+
+// Сброс стилей
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  
+
+}
+address {
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Скрытые элементы */
+
+.qualities__title,
+.gallery__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+

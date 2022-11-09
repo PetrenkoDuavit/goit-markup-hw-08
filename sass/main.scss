@@ -1,0 +1,22 @@
+@import './utils/variables'; //Переменные и утилитарные классы
+
+// //База
+@import './components/base/header'; //Шапка
+@import './components/base/footer'; //Подвал
+
+//Студия
+@import './components/studio/hero'; //Секция с заголовоко H1
+@import './components/studio/qualities'; //Качества компании
+@import './components/studio/products'; //Чем мы занимаемся
+@import './components/studio/team'; //Наша команда
+@import './components/studio/clients'; //Клиенты
+
+//Портфолио
+@import './components/portfolio/gallery'; //Галерея
+
+//Переопределяемые блоки
+@import './components/multi_block/logo'; //Логотип (Шапка, футор)
+@import './components/multi_block/social_btn'; //Кнопки социальных сетей (Студия, футор)
+@import './components/multi_block/subs-form'; //Форма подписки (Футор)
+@import './components/multi_block/modal'; //Модальное окно (Студия)
+@import './components/multi_block/filter_btn'; //Кнопки фильтра (Портфолио)

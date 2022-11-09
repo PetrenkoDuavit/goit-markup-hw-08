@@ -1,0 +1,35 @@
+.soc-list {
+  @include flexCentr();
+  &__item {
+    width: 44px;
+    height: 44px;
+    margin-left: 10px;
+  }
+  &__item:first-child {
+    margin-left: 0px;
+  }
+  &__link {
+    @include flexCentr();
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    fill: #afb1b8;
+    transition: background-color 250ms var(--time-function), fill 250ms var(--time-function);
+  }
+  &__link:hover,
+  &__link:focus {
+    background-color: var(--brand-color-accent);
+    fill: var(--brand-color_white);
+  }
+  // &__icon {
+  //   // fill: #afb1b8;
+  // }
+  // &__link:hover &__icon,
+  // &__link:focus &__icon {
+  //   // fill: var(--brand-color_white);
+  //   // background-color: var(--brand-color-accent);
+  // }
+  &__link--background-color {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}

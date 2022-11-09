@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>ВЕБ-Студия</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-box container">
+        <a class="logo" href="./index.html">
+          <span class="logo__web">Web</span>Studio</a>
+        <button
+          type="button"
+          class="mobile__btn"
+          aria-expanded="false"
+          aria-label="Переключатель мобильного меню"
+          data-menu-button
+        >
+          <svg width="40" height="40">
+            <use
+              class="mobile__icon--close"
+              href="./images/svg/icons.svg#icon-mobile-menu-close"
+            ></use>
+            <use class="mobile__icon--menu" href="./images/svg/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+        <div class="mob-menu" data-menu>
+          <nav>
+            <ul class="nav">
+              <li class="nav__item">
+                <a class="nav__link" href="./index.html">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--current" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="/">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-wrap">
+            <ul class="contacts">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--styles" href="info@devstudio.com">
+                  <svg class="contacts__icon" width="16" height="10">
+                    <use href="./images/svg/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="+380961111111">
+                  <svg class="contacts__icon" width="12" height="16">
+                    <use href="./images/svg/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+            <ul class="header-social__list">
+              <li class="header-social__item">
+                <a href="" class="header-social__link">Instagram</a>
+              </li>
+              <li class="header-social__item">
+                <a href="" class="header-social__link">Twitter</a>
+              </li>
+              <li class="header-social__item">
+                <a href="" class="header-social__link">Facebook</a>
+              </li>
+              <li class="header-social__item">
+                <a href="" class="header-social__link">LinkedIn</a>
+              </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="gallery section">
+        <div class="container">
+          <h1 class="gallery__title">Заголовок</h1>
+          <ul class="filter-btn filter-btn__section">
+            <li class="filter-btn__item">
+              <button type="button" class="filter-btn__btn">Усі</button>
+            </li>
+            <li class="filter-btn__item">
+              <button type="button" class="filter-btn__btn">Веб-сайти</button>
+            </li>
+            <li class="filter-btn__item">
+              <button type="button" class="filter-btn__btn">Додатки</button>
+            </li>
+            <li class="filter-btn__item">
+              <button type="button" class="filter-btn__btn">Дизайн</button>
+            </li>
+            <li class="filter-btn__item">
+              <button type="button" class="filter-btn__btn">Маркетинг</button>
+            </li>
+          </ul>
+          
+          <ul class="gallery__list">
+            <li class="gallery__item" >
+              <a href="./portfolio.html">
+                <div class="gallery__img-box">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop_webp@1x/project_img_1@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_1@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet_webp@1x/tabl_project_img_1@1x.webp 1x,
+                        ./images/tablet/tablet_webp@2x/tabl_project_img_1@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile_webp@1x/mob_project_img_1@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_1@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <img
+                      class="gallery__img"
+                      src="./images/desktop/desktop@1x/project_img_1.jpg"
+                      alt="Ноутбук с открытым на нем сайтом"
+                    />
+                  </picture>
+                  <p class="gallery__paragraph">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+                <div class="gallery__text-box">
+                  <h2 class="gallery__project-title">Технокряк</h2>
+                  <p class="gallery__project-text">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="./portfolio.html">
+                <div class="gallery__img-box">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop_webp@1x/project_img_2@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_2@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet_webp@1x/tabl_project_img_2@1x.webp 1x,
+                        ./images/tablet/tablet_webp@2x/tabl_project_img_2@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile_webp@1x/mob_project_img_2@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_2@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <img
+                      class="gallery__img"
+                      src="./images/desktop/desktop@1x/project_img_2.jpg"
+                      alt="Постер с баскетболистами"
+                    />
+                  </picture>
+                  <p class="gallery__paragraph">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+                <div class="gallery__text-box">
+                  <h2 class="gallery__project-title">
+                    Постер <span lang="en">Orlean vs Golden Star</span>
+                  </h2>
+                  <p class="gallery__project-text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="./portfolio.html">
+                <div class="gallery__img-box">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop_webp@1x/project_img_3@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_3@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet_webp@1x/tabl_project_img_3@1x.webp 1x,
+                        ./images/tablet/tablet_webp@2x/tabl_project_img_3@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile_webp@1x/mob_project_img_3@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_3@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <img
+                      class="gallery__img"
+                      src="./images/desktop/desktop@1x/project_img_3.jpg"
+                      alt="Логотип ресторана"
+                    />
+                  </picture>
+                  <p class="gallery__paragraph">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+                <div class="gallery__text-box">
+                  <h2 class="gallery__project-title">Ресторан <span lang="en">Seafood</span></h2>
+                  <p class="gallery__project-text">Додатки</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="./portfolio.html">
+                <div class="gallery__img-box">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop_webp@1x/project_img_4@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_4@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet_webp@1x/tabl_project_img_4@1x.webp 1x,
+                        ./images/tablet/tablet_webp@2x/tabl_project_img_4@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile_webp@1x/mob_project_img_4@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_4@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <img
+                      class="gallery__img"
+                      src="./images/desktop/desktop@1x/project_img_4.jpg"
+                      alt="Аудио наушники"
+                    />
+                  </picture>
+                  <p class="gallery__paragraph">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+                <div class="gallery__text-box">
+                  <h2 class="gallery__project-title">Проєкт <span lang="en">Prime</span></h2>
+                  <p class="gallery__project-text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="./portfolio.html">
+                <div class="gallery__img-box">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop_webp@1x/project_img_5@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_5@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet_webp@1x/tabl_project_img_5@1x.webp 1x,
+                        ./images/tablet/tablet_webp@2x/tabl_project_img_5@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile_webp@1x/mob_project_img_5@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_5@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <img
+                      class="gallery__img"
+                      src="./images/desktop/desktop@1x/project_img_5.jpg"
+                      alt="Две картонные коробки"
+                    />
+                  </picture>
+                  <p class="gallery__paragraph">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+                <div class="gallery__text-box">
+                  <h2 class="gallery__project-title">Проєкт <span lang="en">Boxes</span></h2>
+                  <p class="gallery__project-text">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="./portfolio.html">
+                <div class="gallery__img-box">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop_webp@1x/project_img_6@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_6@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet_webp@1x/tabl_project_img_6@1x.webp 1x,
+                        ./images/tablet/tablet_webp@2x/tabl_project_img_6@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile_webp@1x/mob_project_img_6@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_6@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <img
+                      class="gallery__img"
+                      src="./images/desktop/desktop@1x/project_img_6.jpg"
+                      alt="Монитор с открытым на нем сайтом"
+                      />
+                  </picture>
+                  <p class="gallery__paragraph">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+                <div class="gallery__text-box">
+                  <h2 class="gallery__project-title" lang="en">Inspiration has no Borders</h2>
+                  <p class="gallery__project-text">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="./portfolio.html">
+                <div class="gallery__img-box">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop_webp@1x/project_img_7@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_7@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet_webp@1x/tabl_project_img_7@1x.webp 1x,
+                        ./images/tablet/tablet_webp@2x/tabl_project_img_7@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile_webp@1x/mob_project_img_7@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_7@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <img
+                      class="gallery__img"
+                      src="./images/desktop/desktop@1x/project_img_7.jpg"
+                      alt="Женский журнал"                    />
+                  </picture>
+                  <p class="gallery__paragraph">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+                <div class="gallery__text-box">
+                  <h2 class="gallery__project-title">
+                    Видання <span lang="en">Limited Edition</span>
+                  </h2>
+                  <p class="gallery__project-text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="./portfolio.html">
+                <div class="gallery__img-box">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop_webp@1x/project_img_8@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_8@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet_webp@1x/tabl_project_img_8@1x.webp 1x,
+                        ./images/tablet/tablet_webp@2x/tabl_project_img_8@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile_webp@1x/mob_project_img_8@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_8@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <img
+                      class="gallery__img"
+                      src="./images/desktop/desktop@1x/project_img_8.jpg"
+                      alt="Бирка с логотипом"
+                    />
+                  </picture>
+                  <p class="gallery__paragraph">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+                <div class="gallery__text-box">
+                  <h2 class="gallery__project-title">Проєкт <span lang="en">LAB</span></h2>
+                  <p class="gallery__project-text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="gallery__item">
+              <a href="./portfolio.html">
+                <div class="gallery__img-box">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop_webp@1x/project_img_9@1x.webp 1x,
+                        ./images/desktop/desktop_webp@2x/project_img_9@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet_webp@1x/tabl_project_img_9@1x.webp 1x,
+                        ./images/tablet/tablet_webp@2x/tabl_project_img_9@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile_webp@1x/mob_project_img_9@1x.webp 1x,
+                        ./images/mobile/mobile_webp@2x/mob_project_img_9@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <img
+                      class="gallery__img"
+                      src="./images/desktop/desktop@1x/project_img_9.jpg"
+                      alt="Человек работает за ноутбуком"
+                    />
+                  </picture>
+                  <p class="gallery__paragraph">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+                <div class="gallery__text-box">
+                  <h2 class="gallery__project-title" lang="en">Growing Business</h2>
+                  <p class="gallery__project-text">Додаток</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+<footer class="footer">
+      <div class="footer__box container">
+        <div class="footer__address-box">
+          <div class="footer__logo-address-box">
+            <a class="logo" href="./index.html">
+              <span lang="en" class="logo__web">Web</span><span lang="en" class="logo__studio--color">Studio</span>
+            </a>
+            <address>
+              <ul class="footer__address-contact">
+                <li ><a href="https://goo.gl/maps/tJLbzxb6EKG3bFai7" rel="noopener noreferrer nofollow" class="footer__address">м. Київ, пр-т Лесі Українки, 26</a></li>
+                <li>
+                  <a class="footer__contact" href="meilto:info@example.com">info@example.com</a>
+                </li>
+                <li><a class="footer__contact" href="tel:+380991111111">+38 099 111 11 11</a></li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__icon-box">
+            <span class="footer__text">приєднуйтесь</span>
+            <ul class="soc-list soc-list__footer-box">
+              <li class="soc-list__item">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  class="soc-list__link soc-list__link--background-color"
+                >
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-list__item">
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  class="soc-list__link soc-list__link--background-color"
+                >
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-list__item">
+                <a
+                  href="https://facebook.com/"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  class="soc-list__link soc-list__link--background-color"
+                >
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-list__item">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  class="soc-list__link soc-list__link--background-color"
+                >
+                  <svg class="footer__icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form name="subs-form" class="footer__subs-form">
+          <label for="mail" class="subs-form__text">Підпишіться на розсилку</label>
+          <div class="subs-form__box">
+            <input class="subs-form__input" type="email" id="mail" placeholder="E-mail" />
+            <button type="submit" class="subs-form__btn">
+              Підписатися
+              <svg class="subs-form__btn-icon" width="24" height="24">
+                <use href="./images/svg/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>

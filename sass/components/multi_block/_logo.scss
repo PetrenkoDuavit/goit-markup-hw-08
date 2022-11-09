@@ -1,0 +1,16 @@
+.logo {
+  font-family: 'Raleway';
+  @include font(700, 26px, 1.19, null);
+  color: var(--brand-color_black);
+  &__web {
+    color: var(--brand-color-accent);
+  }
+
+  &__studio--color {
+    color: var(--brand-color_white);
+  }
+  @media screen and(max-width:480px) {
+    justify-content: center;
+    padding: 0;
+  }
+}

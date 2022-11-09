@@ -1,0 +1,219 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--time-function), visibility 250ms var(--time-function);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 450px;
+  height: 98%;
+  max-height: 609px;
+  min-height: 480;
+  margin: auto;
+  padding: 40px;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition: transform 250ms var(--time-function);
+  &__title {
+    margin-bottom: 12px;
+    @include font(700, 20px, 1.15, null);
+    font-style: normal;
+    text-align: center;
+    color: var(--brand-color_black);
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--brand-color_white);
+    @include flexCentr;
+  }
+
+  &__input {
+    margin-top: 4px;
+    margin-bottom: 10px;
+    padding-left: 42px;
+
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: border 250ms var(--time-function);
+    cursor: pointer;
+  }
+
+  &__comment {
+    margin-top: 4px;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border 250ms var(--time-function);
+  
+    cursor: pointer;
+  }
+
+  &__comment::placeholder {
+    @include font(null, 12px, 1.17, 0.01em);
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  &__label:hover &__input,
+  &__label:focus-within &__input,
+  &__label:hover &__comment,
+  &__label:focus-within &__comment {
+    border: 1px solid var(--brand-color-accent);
+    outline: 1px solid var(--brand-color-accent);
+  }
+  // .form-label:hover .modal-form-input,
+  // .form-label:focus-within .modal-form-input,
+  // .form-label:hover .modal-form-comment,
+  // .form-label:focus-within .modal-form-comment {
+  //    border: 1px solid var(--accent-color);
+  //    outline: 1px solid var(--accent-color); 
+  // }
+  
+  // .form-label:hover .form-modal-icon,
+  // .form-label:focus-within .form-modal-icon {
+  //   fill: var(--accent-color);
+  // }
+  &__label:hover &__icon,
+  &__label:focus-within &__icon {
+    // fill: var(--brand-color-accent);
+    fill: var(--brand-color-accent);
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__close-icon {
+    position: absolute;
+    transition: fill 250ms var(--time-function);
+  }
+  &__close-icon:focus,
+  &__close-icon:hover {
+    fill: var(--brand-color-accent);
+  }
+
+  &__text {
+    @include font(null, 12px, 1.17, 0.01em);
+    color: #757575;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 15px;
+    transform: translateY(-50%);
+    top: calc(50% - 3px);
+    transition: fill 250ms;
+  }
+
+  &__label-checkbox {
+    @include flexCentr($ai: baseline);
+  }
+
+  &__checkbox-text {
+    @include font(null, 12px, 1.17, null);
+    margin-left: 5px;
+
+    color: #757575;
+  }
+
+  &__checkbox-link {
+    color: var(--brand-color-accent);
+  }
+
+  &__checkbox-hidden {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  &__checkbox-hidden:checked + &__checkbox {
+    background-color: var(--brand-color-accent);
+    border: none;
+  }
+
+  &__icon-check {
+    fill: var(--brand-color_white);
+  }
+
+  &__checkbox {
+    position: relative;
+
+    width: 16px;
+    height: 15px;
+    @include flexCentr;
+
+    border: 2px solid var(--brand-color_black);
+    border-radius: 2px;
+  }
+
+  &__btn {
+    @include flexCentr;
+    @include marginX-auto;
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    @include font(700, 16px, 1.9, 0.06em);
+    color: var(--brand-color_white);
+    border: none;
+    background-color: var(--brand-color-accent);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background-color: #188ce8;
+  }
+  @media screen and(min-width:1200px) {
+    width: 528px;
+    min-height: 581px;
+    &__checkbox-text {
+      @include font(null, 14px, 1.71, null);
+    }
+  }
+}

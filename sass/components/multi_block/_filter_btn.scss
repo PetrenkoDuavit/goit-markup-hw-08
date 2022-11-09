@@ -1,0 +1,51 @@
+.filter-btn__section {
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.filter-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  row-gap: 15px;
+  &__item {
+    white-space: nowrap;
+    border-radius: 4px;
+    transition: box-shadow 250ms var(--time-function);
+  }
+  // &__item:hover,
+  // &__item:focus {
+  //   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  //     0px 2px 2px rgba(0, 0, 0, 0.12);
+  // }
+  &__btn:hover,
+  &__btn:focus {
+    color: var(--brand-color_white);
+    background-color: var(--brand-color-accent);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  
+  &__btn {
+    background-color: var(--fone-svg-img);
+    color: var(--brand-color_black);
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    border: none;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    @include font(500, 16px, 1.63, null);
+    transition: background-color 250ms var(--time-function), color 250ms var(--time-function), box-shadow 250ms var(--time-function);
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}

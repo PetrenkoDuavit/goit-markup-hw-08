@@ -1,0 +1,131 @@
+.soc-list__footer-box {
+  margin-top: 20px;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: auto;
+  background-color: var(--brand-color-hero-footer);
+  &__address-box {
+    text-align: center;
+  }
+  &__logo-address-box {
+    margin-bottom: 60px;
+  }
+  &__address {
+    display: block;
+    margin-top: 20px;
+    @include font(null, 14px, 1.71, null);
+    font-style: normal;
+    color: var(--brand-color_white);
+  }
+  &__contact {
+    display: block;
+    @include font(null, 14px, 1.71, null);
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__text {
+    display: block;
+    margin-top: 60px;
+    @include font(700, 14px, 1.14, null);
+    text-transform: uppercase;
+    color: var(--brand-color_white);
+  }
+  &__icon {
+    fill: var(--brand-color_white);
+  }
+  @media screen and (min-width: 768px) {
+    &__address-contact {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 8px;
+    }
+    &__text {
+      margin-top: 0;
+      text-align: center;
+    }
+    &__address-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0 74px 0 61px;
+    }
+    &__logo-address-box {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__address-box {
+      justify-content: start;
+      text-align: left;
+      padding: 0;
+    }
+    &__box {
+      display: flex;
+      align-items: baseline;
+    }
+    &__icon-box {
+      margin-left: 70px;
+    }
+    &__text {
+      text-align: left;
+      margin-top: 0;
+    }
+    &__subs-form {
+      margin-left: 93px;
+    }
+    &__address-contact {
+      gap: 9px;
+      text-align: left;
+    }
+  }
+
+  &__address:hover,
+  &__address:focus {
+  color: var( --brand-color-accent);
+}
+
+&__contact:hover ,
+&__contact:focus {
+  color: var(--brand-color_white);
+}
+  // @media screen and(min-width:481px) and (max-width: 1200px) {
+  //   &__text {
+  //     text-align: center;
+  //   }
+  //   &__address-icon-box {
+  //     display: flex;
+  //   }
+  //   &__address-box {
+  //     flex-direction: row;
+  //     justify-content: space-around;
+  //   }
+
+  //   &__icon-box {
+  //     margin-bottom: 55px;
+  //   }
+  //   &__address-contact {
+  //     text-align: center;
+  //   }
+  // }
+  // @media screen and(min-width:1200px) {
+  //
+  //   }
+
+  //   &__icon-box {
+  //     margin-top: 12px;
+  //     margin-left: 70px;
+  //   }
+  //   &__address-box {
+  //     align-items: normal;
+  //     flex-direction: row;
+  //   }
+  //   &__subs-form {
+  //     margin-top: 12px;
+  //     margin-left: 93px;
+  //   }
+  // }
+}

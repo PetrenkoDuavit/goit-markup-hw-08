@@ -1,0 +1,227 @@
+/* ----------Шапка--------- */
+.header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
+  background: var(--brand-color_white);
+  &-box {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    height: 60px;
+  }
+  @media screen and(min-width:768px) {
+    &-box {
+      height: 80px;
+    }
+  }
+}
+
+/* Навигация в шапке */
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  &__link {
+    @include font(500, 40px, 1.18, 0.02em);
+    transition: color 250ms var(--time-function);
+
+    color: var(--brand-color_black);
+  }
+  & a:hover,
+  & a:focus {
+    color: var(--brand-color-accent);
+  }
+
+  &__link--current {
+    color: var(--brand-color-accent);
+  }
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 83px;
+    &__link {
+      display: block;
+      padding: 32px 0;
+      @include font(500, 14px, 1.14, 0.02em);
+    }
+    &__item {
+      position: relative;
+    }
+
+    &__link--current::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: var(--brand-color-accent);
+      border-radius: 2px;
+    }
+  }
+  @media screen and(min-width:1200px) {
+    margin-left: 93px;
+  }
+}
+
+/* Контакты в шапке */
+
+.contacts {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 32px;
+  margin-bottom: 64px;
+
+  &__link {
+    @include font(500, 34px, 1.17, 0.02em);
+    color: var(--brand-color-accent);
+  }
+  &__link--styles {
+    @include font(500, 24px, 1.17, 0.02em);
+    color: var(--brand-color-text);
+  }
+  &__icon {
+    display: none;
+  }
+  @media screen and(min-width:768px) {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 0;
+
+    &__link {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      @include font(500, 12px, 1.17, 0.02em);
+      color: var(--brand-color-text);
+      transition: color 250ms var(--time-function);
+    }
+    &__link:hover,
+    &__link:focus {
+      color: var(--brand-color-accent);
+    }
+    &__icon {
+      display: block;
+      fill: currentColor;
+    }
+  }
+
+  @media screen and(min-width:1200px) {
+    flex-direction: row;
+    gap: 30px;
+
+    &__link {
+      gap: 10px;
+
+      padding: 32px 0;
+      @include font(500, 14px, 1.14, 0.02em);
+      color: var(--brand-color-text);
+    }
+  }
+}
+
+// Мобильная версия---Кнопка
+
+.mobile {
+  &__btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    border-style: none;
+    padding: 0;
+    background-color: var(--brand-color_white);
+    @media screen and(min-width:768px) {
+      display: none;
+    }
+  }
+  &__icon--close,
+  &__icon--menu {
+    transition: fill 250ms var(--time-function);
+  }
+  &__btn:hover &__icon--close,
+  &__btn:focus &__icon--close {
+    fill: var(--brand-color-accent);
+  }
+  &__btn:hover &__icon--menu,
+  &__btn:focus &__icon--menu {
+    fill: var(--brand-color-accent);
+  }
+
+  &__icon--close {
+    text-align: center;
+    display: none;
+  }
+  &__btn.is-open {
+    z-index: 2;
+  }
+
+  &__btn.is-open &__icon--menu {
+    display: none;
+  }
+  &__btn.is-open &__icon--close {
+    display: block;
+  }
+}
+
+// Мобильная версия---Окно
+
+.mob-menu {
+  @media screen and(max-width:767px) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: auto;
+    padding-left: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--brand-color_white);
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and(min-width:768px) {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.header-social {
+  &__list {
+    display: flex;
+  }
+  &__item:nth-child(-n + 3) {
+    padding-right: 10px;
+  }
+  &__item + &__item {
+    border-left: 1px solid var(--brand-color-text);
+    padding-left: 10px;
+  }
+  &__link {
+    @include font(500, 18px, 1.22, 0.02em);
+    color: var(--brand-color-accent);
+  }
+
+  @media screen and(min-width: 768px) {
+    &__list {
+      display: none;
+    }
+  }
+}
